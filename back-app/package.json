@@ -1,13 +1,14 @@
 {
-   "name": "new-typeorm-project",
+   "name": "back-app",
    "version": "0.0.1",
-   "description": "Awesome project developed with TypeORM.",
+   "description": "The back to determine gift transfer.",
    "devDependencies": {
       "@types/node": "^8.0.29",
       "ts-node": "3.3.0",
       "typescript": "3.3.3333"
    },
    "dependencies": {
+      "cors": "^2.8.5",
       "express": "^4.15.4",
       "lodash": "^4.17.21",
       "pg": "^8.4.0",

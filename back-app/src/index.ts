@@ -1,4 +1,5 @@
 import * as express from "express";
+import * as cors from "cors";
 import { Request, Response } from "express";
 import "reflect-metadata";
 import { createConnection } from "typeorm";
@@ -13,7 +14,9 @@ createConnection().then(async connection => {
     app.use(express.urlencoded({
       extended: true
     }));
-
+    app.use(cors())
+    app.options('*', cors())
+    
     app.post("/users", (req: Request, res: Response) => {
         return new UserController().saveUsers(req, res)
     });
